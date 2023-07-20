@@ -1,28 +1,19 @@
-const personajes = ['Goku', 'Vegetta', 'Tronks']
+// import {heroes} from './data/heros'
+import { heroes } from './data/heros'
 
 
 
-const [p1, p2, p3] = personajes;
-
-console.log(p1, p2)
-
-
-
-
-const retornArrgelo = () => {
-    return ['ABC', 123]
+const getHeroeById = (id) =>{
+    return{
+        heroes.find()
+    }
 }
 
-const [letras,numeros] = retornArrgelo()
 
-console.log(numeros)
+console.log(getHeroeById(2))
 
 
-const use_State = (valor) => {
-    return [valor, () => {console.log('Hola Mundo')}]
-}
 
-const [nombre, setNombre] = use_State('Goku')
-console.log(nombre)
 
-setNombre()
+
+// console.table(heroes)
