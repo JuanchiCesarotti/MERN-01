@@ -1,19 +1,29 @@
 // // import {heroes} from './data/heros'
-// import { heroes } from './data/heros'
+import { heroes } from './data/heros'
 
 
 
-// const getHeroeById = (id) =>{
-//     return{
-//         heroes.find()
-//     }
-// }
+const getHeroesById = (id) => {
+    // return heroes.find(((heroe) => {
+    //     if (heroe.id === id)
+    //     {
+    //         return true;
+    //     }
+    //     else
+    //     {
+    //         return false;
+    //     }
+        
+    // }))
+    return heroes.find((heroes) => heroes.id === id)
+}
 
+const getHeroesByOwner = (owner) => {
+   return heroes.filter(heroes =>{
+    if(heroes.owner === owner){
+        return true;
+    }
+   })
+}
 
-// console.log(getHeroeById(2))
-
-
-
-
-
-// // console.table(heroes)
+console.log(getHeroesByOwner('Marvel'))
