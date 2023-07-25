@@ -38,4 +38,4 @@ const getHeroesByIdAsync = (id) => {
     });
 }
 
-getHeroesByIdAsync(2).then((heroe => (console.table( heroe )))).catch(err => (console.log('err', err)))
+getHeroesByIdAsync(10).then((heroe => (console.table( heroe )))).catch(err => (console.log('err', err)))
