@@ -2,19 +2,25 @@
 
 
 const getImagenAsync = async () => {
-    const Api_Key = 'WPTjtac6xUXce6CFVKeFkxmAWZYyiFUO';
-    const Api_Response = await fetch(`https://api.giphy.com/v1/gifs/random?api_key=${Api_Key}`);
-    const {data} = await Api_Response.json()
-
-
-    const {url} = data.images.original 
-    const img = document.createElement('img');
-    img.src = url
-    document.body.append(img)
-
-    console.log(data)
+    try {
+        const Api_Key = 'WPTjtac6xUXce6CFVKeFkxmAWZYyiFUO';
+        const Api_Response = await fetch(`https://api.giphy.com/v1/gifs/random?api_key=${Api_Key}`);
+        const {data} = await Api_Response.json()
+    
+    
+        const {url} = data.images.original 
+        const img = document.createElement('img');
+        img.src = url
+        document.body.append(img)
+    
+        console.log(data)
+    } catch (error) {
+        console.error(error)
+    }
     
 }
+
+
 
 
 getImagenAsync()
