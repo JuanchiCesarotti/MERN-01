@@ -8,7 +8,7 @@
 const FirstApp = () => {
   return (
     <div>
-      <h1>Default App</h1>
+      Default App
     </div>
   )
 }
