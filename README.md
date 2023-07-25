@@ -1,2 +1,1 @@
-# MERN-01
-MERN-01
+# COMPLETE Project 
