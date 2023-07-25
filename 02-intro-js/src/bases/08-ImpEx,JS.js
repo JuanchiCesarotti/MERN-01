@@ -3,7 +3,7 @@ import  heroes, {owners}  from '../data/heros'
 
 
 
-const getHeroesById = (id) => {
+export const  getHeroesById = (id) => {
     // return heroes.find(((heroe) => {
     //     if (heroe.id === id)
     //     {
@@ -18,7 +18,7 @@ const getHeroesById = (id) => {
     return heroes.find((heroes) => heroes.id === id)
 }
 
-const getHeroesByOwner = (owner) => {
+export const getHeroesByOwner = (owner) => {
    return heroes.filter(heroes =>{
     if(heroes.owner === owner){
         return true;
@@ -26,5 +26,5 @@ const getHeroesByOwner = (owner) => {
    })
 }
 
-console.log(getHeroesByOwner('Marvel'))
-console.log(owners)
+// console.log(getHeroesByOwner('Marvel'))
+// console.log(owners)
