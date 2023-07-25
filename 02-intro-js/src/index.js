@@ -1,17 +1,41 @@
 import {getHeroesById, getHeroesByOwner} from "../src/bases/08-ImpEx,JS";
+import heroes from "./data/heros";
 
-const promesa = new Promise((resolve, reject) => {
+// const promesa = new Promise((resolve, reject) => {
 
-    setTimeout(() => {
-        const p1 = (getHeroesById(2))
-        // resolve(p1)
-        resolve(p1)
+//     setTimeout(() => {
+//         const p1 = (getHeroesById(2))
+//         // resolve(p1)
+//         resolve(p1)
         
-    }, 2000);
-});
+//     }, 2000);
+// });
 
 
-promesa.then((heroe) => {
-    console.log('Heroe:', heroe)
-})
-.catch( err => console.log('err', err))
+// promesa.then((heroe) => {
+//     console.log('Heroe:', heroe)
+// })
+// .catch( err => console.log('err', err))
+
+
+const getHeroesByIdAsync = (id) => {
+    return new Promise((resolve, reject) => {
+
+        setTimeout(() => {
+            const p1 = (getHeroesById(id))
+            // resolve(p1)
+            
+            if(p1){
+                resolve(p1)
+            }
+            else{
+                reject(p1)
+            }
+            
+
+            
+        }, 2000);
+    });
+}
+
+getHeroesByIdAsync(2).then((heroe => (console.table( heroe )))).catch(err => (console.log('err', err)))
